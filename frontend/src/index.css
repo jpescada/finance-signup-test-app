@@ -1,0 +1,146 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.page {
+  min-height: 100vh; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  color: #666;
+}
+
+.status-container p {
+  text-align: center;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed #ccc;
+  margin: 10px 0;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-unstyled {
+  background: none;
+  color: var(--primary-color);
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  width: auto;
+}
+
+.button-unstyled:hover {
+  text-decoration: underline;
+  background: none;
+}
+
+.error {
+  color: var(--danger-color);
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.reason {
+  color: var(--danger-color);
+  margin-bottom: 10px;
+}
+
+.status-label {
+  font-weight: bold;
+  font-size: 0.9em;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  background-color: #e9ecef;
+}
+
+.status-label.pending {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.status-label.approved {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status-label.rejected {
+  background-color: #dc3545;
+  color: #fff;
+}
