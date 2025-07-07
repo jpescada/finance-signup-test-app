@@ -1,11 +1,11 @@
 # Finance Signup Test App
 
-This is a simple React application with a Django backend for a finance signup process. 
-It was created as a time-constrained test for a job application. 
+This is a simple React application with a Django backend for a finance signup process.  
+⏰ It was created as a time-constrained test for a job application (<2h). 
 
-The goal was not to have a pretty and fully functional webapp, but rather to demonstrate the ability to set up a full stack application and meet the requirements outlined in the job description.  
+🎯 The goal was not to have a pretty and fully functional webapp, but rather to demonstrate the ability to set up a full stack application and meet the requirements outlined in the coding assignment.  
 
-As my experience creating Django applications from scratch is limited, I had to rely heavily on GitHub Copilot for the implementation. 
+🤖 As my experience creating Django applications from scratch is limited, I had to rely heavily on GitHub Copilot for the implementation. 
 
 ## Frontend Setup
 
@@ -15,7 +15,7 @@ As my experience creating Django applications from scratch is limited, I had to 
    ```
 
 2. Install dependencies:
-  ```bash
+   ```bash
    npm install
    ```
 
