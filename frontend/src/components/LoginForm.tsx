@@ -23,7 +23,7 @@ const LoginForm: FC = () => {
       await login(data.name, data.password);
       navigate(ROUTES.DASHBOARD);
     } catch (error) {
-      alert('Login failed. Please try again.');
+      alert(`Login failed. ${error}`);
     }
   };
 

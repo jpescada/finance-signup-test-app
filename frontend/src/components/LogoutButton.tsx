@@ -8,9 +8,10 @@ const LogoutButton: FC = () => {
   const handleLogout = async () => {
     try {
       await logout();
-      navigate(ROUTES.LOGIN);
     } catch (error) {
-      alert('Logout failed. Please try again.');
+      alert(`Logout failed. ${error}`);
+    } finally {
+      navigate(ROUTES.LOGIN);
     }
   };
 
