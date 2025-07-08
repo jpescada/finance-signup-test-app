@@ -16,10 +16,13 @@ const getStatus = async () => {
     },
     credentials: 'include',
   });
+
+  const responseJson = await response.json();
+
   if (!response.ok) {
-    throw new Error('Failed to fetch status');
+    throw new Error(responseJson?.error || 'Failed to fetch status');
   }
-  return response.json();
+  return responseJson;
 };
 
 const uploadDocument = async (data: FormData) => {
@@ -32,10 +35,13 @@ const uploadDocument = async (data: FormData) => {
     },
     credentials: 'include',
   });
+
+  const responseJson = await response.json();
+
   if (!response.ok) {
-    throw new Error('Upload failed');
+    throw new Error(responseJson?.error || 'Upload failed');
   }
-  return response.json();
+  return responseJson;
 };
 
 export { APPLICATION_STATUS, getStatus, uploadDocument };
