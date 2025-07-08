@@ -30,7 +30,7 @@ const SignUpForm: FC = () => {
       await signup(formData);
       navigate(ROUTES.LOGIN);
     } catch (error) {
-      alert('Sign-up failed.');
+      alert(`Sign-up failed. ${error}`);
     }
   };
 
