@@ -26,7 +26,7 @@ const FileUpload: FC<FileUploadProps> = ({ onSuccess }) => {
       await uploadDocument(formData);
       if (onSuccess) onSuccess();
     } catch (error) {
-      alert('Upload failed.');
+      alert(`Upload failed. ${error}`);
     }
   };
 

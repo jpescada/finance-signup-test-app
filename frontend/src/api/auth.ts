@@ -10,10 +10,14 @@ const signup = async (data: FormData) => {
     },
     credentials: 'include',
   });
+
+  const responseJson = await response.json();
+
   if (!response.ok) {
-    throw new Error('Sign-up failed');
+    throw new Error(responseJson?.detail || responseJson?.error || 'Sign-up failed');
   }
-  return response.json();
+
+  return responseJson;
 };
 
 const login = async (name: string, password: string) => {
@@ -27,10 +31,14 @@ const login = async (name: string, password: string) => {
     body: JSON.stringify({ name, password }),
     credentials: 'include',
   });
+
+  const responseJson = await response.json();
+
   if (!response.ok) {
-    throw new Error('Login failed');
+    throw new Error(responseJson?.detail || responseJson?.error || 'Login failed');
   }
-  return response.json();
+
+  return responseJson;
 };
 
 const logout = async () => {
@@ -42,10 +50,14 @@ const logout = async () => {
     },
     credentials: 'include',
   });
+
+  const responseJson = await response.json();
+
   if (!response.ok) {
-    throw new Error('Logout failed');
+    throw new Error(responseJson?.detail || responseJson?.error || 'Logout failed');
   }
-  return response.json();
+
+  return responseJson;
 };
 
 export { login, logout, signup };
